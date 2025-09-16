@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("nav-toggle");
   const mainNav = document.getElementById("main-nav");
-
+// nagn
   // Toggle nav panel on hamburger click
   navToggle.addEventListener("click", () => {
     mainNav.classList.toggle("open");
