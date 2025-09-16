@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>33 West Avenue Society</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand">
+        <img src="logo.png" alt="33 West Avenue logo" class="logo" onerror="this.style.display='none'">
+        <h1>33 West Avenue</h1>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="office.html">Office Bearers</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <img src="/images/main.png" alt="33westavenueimage">
+        <h2>Welcome to 33 West Avenue Society</h2>
+        <p>We are committed to a safe, eco-friendly, and inclusive community. Browse events, policies, and documents or contact the committee for assistance.</p>
+      </div>
+    </section>
+
+    <section class="features container section-alt">
+      <div class="grid-3">
+        <article>
+          <h4>Office Bearers</h4>
+          <p>Meet the team managing our society, contact details and roles.</p>
+          <a class="link" href="office.html">View</a>
+        </article>
+        <article>
+          <h4>Society Policies</h4>
+          <p>Maintenance, parking, visitor policy, waste management — all in one place.</p>
+          <a class="link" href="policies.html">View</a>
+        </article>
+        <article>
+          <h4>Documents</h4>
+          <p>Bylaws, minutes, forms and downloads for residents.</p>
+          <a class="link" href="documents.html">View</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container small-section">
+      <h3>Quick Contact</h3>
+      <p><strong>Address:</strong> 33 West Avenue, Greenfield City</p>
+      <p><strong>Phone:</strong> +91 98765 43210 &nbsp;&nbsp; <strong>Email:</strong> info@33westavenue.org</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; <span id="year"></span> 33 West Avenue Society</p>
+        <p class="muted">All rights reserved • Built for residents</p>
+      </div>
+      <div class="footer-links">
+        <a href="policies.html">Policies</a>
+        <a href="documents.html">Documents</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
