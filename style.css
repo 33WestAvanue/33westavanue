@@ -41,8 +41,12 @@
       font-size: 24px; /* Larger title */
       margin-bottom: 35px; /* More space */
       color: var(--blue-700); /* Darker title text */
-      font-weight: 600;
       font-weight: 800;
+    }
+    #mobileHeader h2{
+        font-size: 24px;
+        color: var(--blue-700); /* Darker title text */
+        font-weight: 800;
     }
 
     .sidebar .section {
