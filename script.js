@@ -1,20 +1,31 @@
-// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggleButton = document.getElementById('menuToggleButton');
+  const sidebar = document.getElementById('sidebar');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.getElementById("nav-toggle");
-  const mainNav = document.getElementById("main-nav");
-// nagn
-  // Toggle nav panel on hamburger click
-  navToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-    navToggle.classList.toggle("open");
+  menuToggleButton.addEventListener('click', function() {
+    sidebar.classList.toggle('open');
   });
 
-  // Optional: close nav when a link is clicked (mobile UX)
-  document.querySelectorAll("#main-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
-      navToggle.classList.remove("open");
-    });
+  // Optional: Close sidebar when clicking a link on mobile
+  sidebar.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI' && window.innerWidth <= 768) {
+      sidebar.classList.remove('open');
+    }
+  });
+
+  // Optional: Close sidebar if clicking outside
+  document.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
+      if (!sidebar.contains(event.target) && !menuToggleButton.contains(event.target)) {
+        sidebar.classList.remove('open');
+      }
+    }
+  });
+
+  // Ensure sidebar is always visible on desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      sidebar.classList.remove('open');
+    }
   });
 });
