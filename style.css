@@ -237,6 +237,9 @@
       .seriallen{
         width: 25px;
       }
+      .align-doc{
+        text-align: center;
+      }
       .cards {
         grid-template-columns: 1fr; /* Stack cards vertically */
         gap: 15px;
