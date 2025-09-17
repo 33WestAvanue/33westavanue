@@ -9,6 +9,7 @@
      --bg: #fbfcfd;
      --card: #ffffff;
      --max-width: 1100px;
+     --gold:#9b6e3c;
 }
 /* Reset */
     * {
@@ -17,77 +18,41 @@
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Slightly modern font */
     }
+/* Main header (always visible) */
+.main-header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  position: sticky; /* optional: stays on top while scrolling */
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header h2 {
+  font-size: 24px;
+  color: var(--blue-700);
+  font-weight: 800;
+  margin: 0;
+}
 
     body {
       display: flex;
+      flex-direction: column;
       min-height: 100vh;
       background-color: #f0f4f8; /* Very light background for the whole page */
       color: #333;
     }
 
-    /* Sidebar */
-    .sidebar {
-      width: 250px; /* Slightly wider sidebar as in the image */
-      background-color: #ffffff;
-      border-right: 1px solid #e2e8f0; /* Light border */
-      padding: 25px; /* More padding */
-      flex-shrink: 0;
-      box-shadow: 0 0px 15px rgba(0,0,0,0.05); /* Subtle shadow for depth */
-      z-index: 1000; /* Ensure sidebar is above other content on mobile */
-      position: relative; /* Needed for mobile positioning */
-    }
-
-    .sidebar h2 {
-      font-size: 24px; /* Larger title */
-      margin-bottom: 35px; /* More space */
-      color: var(--blue-700); /* Darker title text */
-      font-weight: 800;
-    }
     #mobileHeader h2{
         font-size: 24px;
-        color: var(--blue-700); /* Darker title text */
+        color: var(--gold); /* Darker title text */
         font-weight: 800;
+        text-align: center;
     }
 
-    .sidebar .section {
-      margin-bottom: 25px;
-    }
-
-    .sidebar .section label {
-      font-weight: 500; /* Medium weight for labels */
-      display: block;
-      margin-bottom: 8px;
-      color: #718096; /* Muted label color */
-      font-size: 14px;
-    }
-
-    .sidebar .section p {
-      color: #4a5568; /* Slightly darker text */
-      margin-bottom: 5px;
-      font-size: 15px;
-    }
-
-    .sidebar .section ul {
-      list-style: none;
-      padding-left: 0; /* Ensure no default list padding */
-    }
-
-    .sidebar .section ul li {
-      padding: 6px 0; /* Slightly less padding */
-      cursor: pointer;
-      color: #3182ce; /* Blue for links */
-      font-size: 15px;
-      transition: color 0.2s ease;
-    }
-
-    .sidebar .section ul li:hover {
-      color: #2b6cb0; /* Darker blue on hover */
-      text-decoration: underline; /* Underline on hover for clarity */
-    }
-
-    .section img{
-        width:200px;  
-    }
+    
     /* Main content */
     .main-content {
       flex: 1;
@@ -104,6 +69,7 @@
     .tabs {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       margin-bottom: 30px; /* More space after tabs */
     }
@@ -143,7 +109,7 @@
 
     .card {
       background-color: #ffffff;
-      padding: 20px;
+      padding: 10px;
       border-radius: 8px; /* Consistent rounding */
       box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Softer, slightly larger shadow */
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -190,7 +156,7 @@
       padding: 15px 20px;
       border-bottom: 1px solid #e2e8f0;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       position: sticky;
       top: 0;
@@ -199,9 +165,9 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .mobile-header h2 {
-      font-size: 20px;
-      color: #2c3e50;
+    .main-header h2 {
+      font-size: 24px;
+      color: var(--gold);
       margin: 0; /* Remove default margin */
     }
 
@@ -253,60 +219,31 @@
       body {
         flex-direction: column;
       }
-
-      .mobile-header {
-        display: flex; /* Show on mobile */
-      }
-
-      .sidebar {
-        width: 60%;
-        position: fixed; /* Fixed position for overlay */
-        top: 60px; /* Below the mobile header */
-        left: 0;
-        height: calc(100vh - 60px); /* Full height minus header */
-        transform: translateX(-100%); /* Hide sidebar by default */
-        transition: transform 0.3s ease-out;
-        border-right: none;
-        box-shadow: none; /* No shadow when hidden */
-        padding: 20px;
-        background-color: #ffffff; /* Ensure background when open */
-      }
-
-      .sidebar.open {
-        transform: translateX(0); /* Slide in when open */
-        box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Shadow when open */
-      }
-
-      .sidebar h2 {
-        display: none; /* Hide main sidebar title on mobile */
-      }
-
       .main-content {
         margin: 0; /* No margin on mobile */
         padding: 20px;
         border-radius: 0; /* No rounded corners */
         box-shadow: none; /* No shadow */
         flex: 1; /* Take remaining space */
-        padding-top: 75px; /* Adjust for fixed mobile header */
+        padding-top: 20px; /* Adjust for fixed mobile header */
       }
 
-      /* .tabs { flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; } .tabs button { flex-grow: 1; max-width: calc(50% - 4px); /* Two buttons per row for example padding: 8px 12px; font-size: 14px; }   older tabs*/
+      /* .tabs { flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; } .tabs  older tabs*/
       .tabs {
         display: flex;
-        flex-wrap: nowrap;              /* ✅ No wrapping */
-        overflow-x: auto;               /* ✅ Enable scrolling */
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 8px;
         margin-bottom: 25px;
         scrollbar-width: thin;          /* optional: thin scrollbar for Firefox */
       }
-
-      .tabs button {
-        flex: 0 0 auto;                 /* ✅ Prevent shrinking */
-        white-space: nowrap;            /* ✅ Keep text in one line */
-        padding: 8px 16px;
-        font-size: 14px;
+      .tabs button { 
+        flex-grow: 1; 
+        max-width: calc(50% - 4px); /* Two buttons per row for example */
+        padding: 8px 12px; 
+        font-size: 14px; 
+        width: 100px;
+        height: 60px;
       }
 
       .cards {
@@ -318,19 +255,9 @@
 
     /* Smallest screens (e.g., iPhone SE) */
     @media (max-width: 480px) {
-        .mobile-header {
-            padding: 10px 15px;
-        }
-        .mobile-header h2 {
-            font-size: 18px;
-        }
-        .menu-toggle-button {
-            padding: 6px 10px;
-            font-size: 13px;
-        }
         .main-content {
             padding: 15px;
-            padding-top: 65px; /* Adjust for smaller header */
+            padding-top: 20px; /* Adjust for smaller header */
         }
         .sidebar {
             top: 50px; /* Adjust for smaller header */
