@@ -203,6 +203,9 @@
     .list{
       margin-left: 20px;
     }
+    .align-doc{
+        text-align: center;
+    }
     /* Responsive adjustments */
     @media (max-width: 768px) {
       body {
