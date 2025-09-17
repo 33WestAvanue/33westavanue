@@ -103,7 +103,7 @@
     /* Tabs */
     .tabs {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 10px;
       margin-bottom: 30px; /* More space after tabs */
     }
@@ -118,6 +118,7 @@
       font-size: 15px;
       font-weight: 500;
       transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+      width: 200px;
     }
 
     .tabs button:hover:not(.active) {
@@ -223,6 +224,25 @@
         font-size: 16px;
     }
 
+    table {
+      width: 100%; /* wider for small screens */
+      max-width: 600px; /* prevent it from stretching too much on large screens */
+      border-collapse: collapse;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    th {
+      background-color: var(--blue-100);
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       body {
@@ -234,7 +254,7 @@
       }
 
       .sidebar {
-        width: 100%;
+        width: 60%;
         position: fixed; /* Fixed position for overlay */
         top: 60px; /* Below the mobile header */
         left: 0;
@@ -283,6 +303,7 @@
         grid-template-columns: 1fr; /* Stack cards vertically */
         gap: 15px;
       }
+
     }
 
     /* Smallest screens (e.g., iPhone SE) */
