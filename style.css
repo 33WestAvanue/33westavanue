@@ -234,7 +234,9 @@
         width: 100px;
         height: 60px;
       }
-
+      .seriallen{
+        width: 25px;
+      }
       .cards {
         grid-template-columns: 1fr; /* Stack cards vertically */
         gap: 15px;
