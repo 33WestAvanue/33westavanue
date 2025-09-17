@@ -166,6 +166,22 @@
       font-size: 14px;
       color: #718096; /* Muted card text */
     }
+    /* cards on the work page */
+    .cards-work {
+      display: block;
+      margin-bottom: 50px; /* Adjusted margin */
+    }
+    .card-work{
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .card-work ul li{
+      font-size: 18px;
+      color: black;
+      margin-left: 15px;
+    }
+
+    
 
     /* Mobile Menu Toggle (Hamburger) */
     .mobile-header {
