@@ -8,35 +8,46 @@
 </head>
 <body>
   <header class="main-header">
-    <h2>33 West Avenue</h2>
+    <a href="/index.html" style="text-decoration: none;"><h2>33 West Avenue</h2>
+    <b><p style="color: black;">Co-Operative Housing Society Ltd.</p></b></a>
   </header>
-  <main class="main-content" >
-    <div class="tabs" id="team">
-      <a href="/index.html"><button class="active">Our Team</button></a>
+  <div class="drop-down" onclick="toggleDropdown()">
+      <h4>Show All The Tabs▼</h4>
+    <nav class="dropdown" id="dropdownMenu">
+      <a href="/pages/team.html"><button>Our Team</button></a>
+      <a href="/pages/work.html"><button>Work in progress</button></a>
+      <a href="/pages/policies.html"><button>Policies</button></a>
+      <a href="/pages/doc.html"><button>Documents</button></a>
+      <a href="/pages/notice.html"><button>Notice</button></a>
+      <a href="/pages/contact.html"><button>Key Contacts</button></a>
+    </nav>
+    </div>
+
+  <main class="main-content">
+    <div id="align-img">
+      <img src="/images/main.png" alt="Society image">
+    </div>
+    <div class="tabs" style="height: 120px;">
+      <a href="/pages/team.html"><button>Our Team</button></a>
       <a href="/pages/work.html"><button>Work in progress</button></a>
       <a href="/pages/policies.html"><button>Policies</button></a>
       <a href="/pages/doc.html"><button>Documents</button></a>
       <a href="/pages/notice.html"><button>Notice</button></a>
       <a href="/pages/contact.html"><button>Key Contacts</button></a>
     </div>
-    <!-- Example content for the new tabs, you can customize this -->
-    <div class="cards">
-      <div class="card">
-        <h4>Mr. Pravin Bhure <br>(Chairman)</h4>
-        <p><a href="tel:+918888896889">+918888896889</a></p>
-      </div>
-      <div class="card">
-        <h4>Mr. Amol Bhilare<br>(Secretary)</h4>
-        <p>abc@example.com</p>
-      </div>
-      <div class="card">
-        <h4>Mr. Mandar Shendge<br>(Treasurer)</h4>
-        <p>abc@example.com</p>
-      </div>
-      <div class="card">
-        <h4>Mr. Shrikant<br>(Member)</h4>
-      </div>
+    <div id="align-img">
+      <h2>Location</h2>
+      <p>Pan Card Club Rd, Baner Gaon, Baner, Pune, Maharashtra 411045, India</p>
+      <a href="https://maps.app.goo.gl/1fs1YAyqkzJCXJ186">Get Direction</a>
     </div>
-</main>
+  </main>
+  <footer>
+    <div class="footer">
+      <p> &copy;2025 33 West Avenue | All rights Reserved</p>
+    </div>
+  </footer>
+      
+  <script src="/script.js">
+  </script>
 </body>
 </html>
