@@ -221,31 +221,7 @@
         text-align: center;
     }
 
-    /* background images */
-    #team{
-      background-image: url(/images/team.jpg);
-      background-size: cover;
-    }
-    #team-w{
-      background-image: url(/images/progress.jpg);
-      background-size: cover;
-    }
-    #team-p{
-      background-image: url(/images/policies.jpg);
-      background-size: cover;
-    }
-    #team-d{
-      background-image: url(/images/doc.jpg);
-      background-size: cover;
-    }
-    #team-n{
-      background-image: url(/images/notice.jpg);
-      background-size: cover;
-    }
-    #team-c{
-      background-image: url(/images/contacts.jpg);
-      background-size: cover;
-    }
+    
     /* Dropdown Menu (hidden by default) */
 .dropdown {
   display: none;
@@ -347,9 +323,7 @@
       .tabs {
         display: flex;  
       }
-      #team #team-w #team-p #team-n #team-c #team-d{
-        padding:0px;
-      }
+      
       .tabs button { 
         flex-grow: 1; 
         max-width: calc(50% - 4px); /* Two buttons per row for example */
@@ -390,14 +364,6 @@
         }
         .tabs button {
             max-width: 100%; /* One button per row if space is very tight */
-        }
-        .sidebar .section ul li,
-        .sidebar .section p,
-        .sidebar .section label {
-            font-size: 14px;
-        }
-        .sidebar{
-            text-align: center;
         }
         .footer{
           display: block;
