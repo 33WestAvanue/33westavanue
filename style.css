@@ -70,8 +70,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: 10px;
       margin-bottom: 30px; /* More space after tabs */
+      height:300px; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;  
     }
 
     .tabs button {
@@ -206,6 +211,32 @@
     .align-doc{
         text-align: center;
     }
+
+    /* background images */
+    #team{
+      background-image: url(/images/team.jpg);
+      background-size: cover;
+    }
+    #team-w{
+      background-image: url(/images/progress.jpg);
+      background-size: cover;
+    }
+    #team-p{
+      background-image: url(/images/policies.jpg);
+      background-size: cover;
+    }
+    #team-d{
+      background-image: url(/images/doc.jpg);
+      background-size: cover;
+    }
+    #team-n{
+      background-image: url(/images/notice.jpg);
+      background-size: cover;
+    }
+    #team-c{
+      background-image: url(/images/contacts.jpg);
+      background-size: cover;
+    }
     /* Responsive adjustments */
     @media (max-width: 768px) {
       body {
@@ -224,10 +255,11 @@
       .tabs {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 25px;
-        scrollbar-width: thin;          /* optional: thin scrollbar for Firefox */
+        align-items: center;        
+        height:250px;
+      }
+      #team #team-w #team-p #team-n #team-c #team-d{
+        padding:0px;
       }
       .tabs button { 
         flex-grow: 1; 
