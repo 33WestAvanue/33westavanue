@@ -64,6 +64,12 @@
       margin: 20px; /* Margin around the main content to float it */
       box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* More prominent shadow for the floating effect */
     }
+    #align-img{
+      text-align: center;
+    }
+    #align-img img{
+      width: 500px;
+    }
 
     /* Tabs */
     .tabs {
@@ -78,7 +84,7 @@
       background-repeat: no-repeat;
       background-position: center;  
     }
-
+    
     .tabs button {
       padding: 10px 20px;
       border: 1px solid #cbd5e0; /* Light border for tabs */
@@ -237,11 +243,88 @@
       background-image: url(/images/contacts.jpg);
       background-size: cover;
     }
+    /* Dropdown Menu (hidden by default) */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Show dropdown when active */
+.dropdown.show {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+.dropdown a {
+  text-decoration: none;
+}
+
+.dropdown button {
+  background: #edf2f7;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50%;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dropdown button:hover {
+  background: #e2e8f0;
+}
+
+.dropdown button:last-child {
+  border-bottom: none;
+}
+.drop-down{
+  text-align: center;
+  margin: 10px 20px 5px 20px;
+}
+.drop-down h4{
+  padding: 5px;
+  color: var(--gold);
+}
+.footer{
+  display: block;
+  background-image: url(/images/foot.jpg);
+  background-size: cover;
+  background-position: center;
+  color: black;         /* text visible on image */
+  display: flex;        /* center text */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-position: bottom center;
+  width: 100%;          /* full width */
+  height: 200px;        /* give height so image shows */
+}
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       body {
         flex-direction: column;
       }
+      from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .drop-down{
+        margin: 0px;
+      }
+
       .main-content {
         margin: 0; /* No margin on mobile */
         padding: 20px;
@@ -250,13 +333,19 @@
         flex: 1; /* Take remaining space */
         padding-top: 20px; /* Adjust for fixed mobile header */
       }
-
+      
+      #align-img{
+        text-align: center;
+      }
+      #align-img img{
+         width: 400px;
+      }
+      #align-img h2, a{
+        padding: 5px;
+      }
       /* .tabs { flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 25px; } .tabs  older tabs*/
       .tabs {
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-        height:250px;
+        display: flex;  
       }
       #team #team-w #team-p #team-n #team-c #team-d{
         padding:0px;
@@ -302,5 +391,19 @@
         }
         .sidebar{
             text-align: center;
+        }
+        .footer{
+          display: block;
+          background-image: url(/images/foot.jpg);
+          background-size: cover;
+          background-position: center;
+          color: black;         /* text visible on image */
+          display: flex;        /* center text */
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          background-position: bottom center;
+          width: 100%;      
+          height: 80px;    /* full width */
         }
     }
