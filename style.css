@@ -338,7 +338,7 @@
         text-align: center;
       }
       #align-img img{
-         width: 400px;
+         width: 100%;
       }
       #align-img h2, a{
         padding: 5px;
