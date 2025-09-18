@@ -7,17 +7,24 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header class="main-header">
-        <h2>33 West Avenue</h2>
-    </header>
-  <main class="main-content">
-    <div class="tabs" id="team-p">
+  <header class="main-header">
+    <a href="/index.html" style="text-decoration: none;"><h2>33 West Avenue</h2>
+    <b><p style="color: black;">Co-Operative Housing Society Ltd.</p></b></a>
+  </header>
+  <div class="drop-down" onclick="toggleDropdown()">
+      <h4>Show All The Tabs▼</h4>
+    <nav class="dropdown" id="dropdownMenu">
       <a href="/index.html"><button>Our Team</button></a>
       <a href="/pages/work.html"><button>Work in progress</button></a>
-      <a href="/pages/policies.html"><button class="active">Policies</button></a>
+      <a href="/pages/policies.html"><button>Policies</button></a>
       <a href="/pages/doc.html"><button>Documents</button></a>
       <a href="/pages/notice.html"><button>Notice</button></a>
       <a href="/pages/contact.html"><button>Key Contacts</button></a>
+    </nav>
+    </div>
+  <main class="main-content">
+    <div class="tabs" id="team-p">
+      <a href="/pages/policies.html"><button class="active">Policies</button></a>
     </div>
     <!-- Example content for the new tabs, you can customize this -->
     <section class="cards-work">
@@ -328,6 +335,6 @@ guidelines and common area usage.</li>
       </div>
     </section>
 </main>
-
+<script src="/script.js"></script>
 </body>
 </html>
